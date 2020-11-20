@@ -1,0 +1,201 @@
+{
+	"info": {
+		"_postman_id": "3e3864a1-5e85-4427-8ae7-a4822273fc11",
+		"name": "todo-list-app-API_PROJECT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "tasks-api",
+			"item": [
+				{
+					"name": "add-new-task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\":\"1\",\r\n    \"name\":\"play\",\r\n    \"time\":\"12:50AM\",\r\n    \"coco\":\"coco\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{LOCAL}}{{tasks-prefix}}/add-task",
+							"host": [
+								"{{LOCAL}}{{tasks-prefix}}"
+							],
+							"path": [
+								"add-task"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "read-task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete-task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update-task",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get-all-tasks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}{{tasks-prefix}}/get-all-tasks",
+							"host": [
+								"{{LOCAL}}{{tasks-prefix}}"
+							],
+							"path": [
+								"get-all-tasks"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "users-api",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{LOCAL}}{{user-prefix}}/login",
+							"host": [
+								"{{LOCAL}}{{user-prefix}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create-new-user",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "5b925817-245c-4a62-845e-329ce58e40ea",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cf624266-169f-4593-89c5-94a04302742b",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1863b2e4-180f-42b7-bbab-1ae801847f1c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "bc097963-a50f-4ae0-8636-168973a48981",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "7975ec19-5dc3-4fa6-8dfb-72fc8f3b845a",
+			"key": "LOCAL",
+			"value": "localhost:8080"
+		},
+		{
+			"id": "88a615fe-a80e-4d66-97e2-caa4806d99a3",
+			"key": "user-prefix",
+			"value": "/users"
+		},
+		{
+			"id": "bcd4d3c3-5b91-4ab3-a625-da95fbe57681",
+			"key": "tasks-prefix",
+			"value": "/tasks"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
